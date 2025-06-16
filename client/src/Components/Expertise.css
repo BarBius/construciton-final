@@ -1,0 +1,36 @@
+.expertise-container {
+padding: 20px;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+}
+
+.mission, .competences, .valeurs {
+margin-bottom: 40px;
+}
+
+h2 {
+color: #333;
+border-bottom: 2px solid  blue;
+padding-bottom: 10px;
+margin-bottom: 20px;
+}
+
+h3 {
+color: blue;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+ul {
+list-style-type: disc;
+padding-left: 20px;
+}
+
+ul li {
+margin-bottom: 10px;
+color: rgb(99, 99, 99);
+}
+
+strong {
+color: #000;
+}

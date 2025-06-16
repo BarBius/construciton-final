@@ -1,0 +1,58 @@
+/* Carousel slide images */
+.slick-slide img {
+    width: 100%; /* Make the image width responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Set maximum width */
+    max-height: 500px; /* Set maximum height */
+    object-fit: cover;
+}
+
+/* Carousel container */
+.carousel-container {
+    margin-top: 20px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.carousel-container:hover {
+    box-shadow: 2px 5px 5px rgba(63, 61, 61, 0.3);
+}
+
+/* Responsive Styles */
+
+/* For devices with max-width of 1200px (Tablets) */
+@media (max-width: 1200px) {
+    .slick-slide img {
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .carousel-container {
+        margin-top: 15px;
+    }
+}
+
+/* For devices with max-width of 768px (Mobile) */
+@media (max-width: 768px) {
+    .slick-slide img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .carousel-container {
+        margin-top: 10px;
+        padding: 5px; /* Add some padding for better mobile experience */
+    }
+}
+
+/* For devices with max-width of 480px (Small mobile) */
+@media (max-width: 480px) {
+    .slick-slide img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .carousel-container {
+        margin-top: 5px;
+        padding: 2px; /* Minimal padding for small screens */
+    }
+}

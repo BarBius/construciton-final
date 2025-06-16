@@ -1,0 +1,293 @@
+/* Header container */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: #333;
+  height: 80px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Navbar container */
+.navigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.mobile-menu-toggle:hover span {
+  background-color: #ccc;
+}
+
+/* Navbar links */
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul li,
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.navigation ul li:last-child,
+.nav-menu li:last-child {
+  margin-right: 0;
+}
+
+.navigation ul li a,
+.nav-menu li a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+/* Hover effect */
+.navigation ul li a:hover,
+.nav-menu li a:hover {
+  background-color: #777;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Active link styling */
+.navigation ul li a.active,
+.nav-menu li a.active {
+  background-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.navigation ul li a.active:hover,
+.nav-menu li a.active:hover {
+  background-color: #0056b3;
+}
+
+/* Logout button styling */
+.logout-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  line-height: 25px;
+  font-size: inherit;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.logout-button:hover {
+  background-color: #b71c1c;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.4em;
+}
+
+.modal-content p {
+  color: #666;
+  margin: 15px 0 25px 0;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.confirm-button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.confirm-button:hover {
+  background-color: #b71c1c;
+}
+
+.cancel-button {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.cancel-button:hover {
+  background-color: #555;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    gap: 20px;
+  }
+
+  .nav-menu.nav-menu-open {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin-bottom: 10px;
+  }
+
+  .nav-menu li:last-child {
+    margin-bottom: 0;
+  }
+
+  .nav-menu li a,
+  .logout-button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .modal-content {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .confirm-button,
+  .cancel-button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navigation ul li,
+  .nav-menu li {
+    margin-right: 15px;
+  }
+
+  .navigation ul li a,
+  .nav-menu li a,
+  .logout-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1200px) {
+  .navigation ul li,
+  .nav-menu li {
+    margin-right: 25px;
+  }
+
+  .navigation ul li a,
+  .nav-menu li a,
+  .logout-button {
+    padding: 12px 24px;
+  }
+}

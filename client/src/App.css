@@ -1,0 +1,60 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Body and background image */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #CBC8CB;
+  background-image: url('/flat-lay-design-engineering-and-construction-concept-on-grey-background-with-tools-white-paper-free-photo.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Remove default margin and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  #root {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  
+  body {
+    background-attachment: scroll; /* Better performance on mobile */
+    background-position: center center;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  #root {
+    padding: 0.5rem;
+  }
+  
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+}

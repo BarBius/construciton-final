@@ -1,0 +1,85 @@
+/* Add some basic styling to the form */
+form {
+max-width: 300px;
+margin: 40px auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group1  {
+    color: black; /* change to whatever colour you want here */
+    font-family: italic;
+    font-size: large;
+    margin: 15px;
+}
+
+/* Style the labels and inputs */
+label {
+display: block;
+margin-bottom: 10px;
+}
+
+label input {
+width: 100%;
+height: 40px;
+margin-bottom: 20px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+
+/* Style the submit button */
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;;
+}
+
+/* Style the message paragraph */
+p {
+color:black;
+margin-bottom: 20px;
+}
+
+/* Add some success and error styles for the message */
+p.success {
+color: #0f0;
+}
+
+p.error {
+color: #f00;
+}
+/* Styling for the Register Link */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link p {
+    font-size: 14px;
+    color: #333;
+}
+
+.register-link button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.register-link button:hover {
+    background-color: #0056b3;
+}
